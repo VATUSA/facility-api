@@ -1,0 +1,3 @@
+[submodule "app/database/legacy"]
+	path = app/database/legacy
+	url = https://github.com/VATUSA/database-legacy
