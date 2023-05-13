@@ -1,3 +1,6 @@
 [submodule "app/database/legacy"]
 	path = app/database/legacy
 	url = https://github.com/VATUSA/database-legacy
+[submodule "app/database/lightning"]
+	path = app/database/lightning
+	url = https://github.com/VATUSA/database-lightning
