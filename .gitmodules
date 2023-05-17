@@ -1,9 +1,12 @@
 [submodule "app/database/legacy"]
 	path = app/database/legacy
 	url = https://github.com/VATUSA/database-legacy
+	branch = main
 [submodule "app/database/lightning"]
 	path = app/database/lightning
 	url = https://github.com/VATUSA/database-lightning
+	branch = main
 [submodule "app/helpers/moodle"]
 	path = app/helpers/moodle
 	url = https://github.com/VATUSA/moodle-integration.git
+	branch = main
