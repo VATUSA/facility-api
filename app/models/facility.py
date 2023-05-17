@@ -1,7 +1,7 @@
 from __future__ import annotations
 import pydantic
 from app.database.legacy import models as legacy
-from app.facility.models.controller import ControllerRole
+from app.models.controller import ControllerRole
 
 
 class Facility(pydantic.BaseModel):

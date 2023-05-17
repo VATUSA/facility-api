@@ -4,3 +4,6 @@
 [submodule "app/database/lightning"]
 	path = app/database/lightning
 	url = https://github.com/VATUSA/database-lightning
+[submodule "app/helpers/moodle"]
+	path = app/helpers/moodle
+	url = https://github.com/VATUSA/moodle-integration.git

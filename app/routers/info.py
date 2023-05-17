@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException, Form, Depends
 from app.database.legacy import models as legacy
 from app.models.facility import Facility as FacilityModel
+from app.models.generic import DataResponse, ListResponse
 
 router = APIRouter(
     prefix="/info",
@@ -9,7 +10,7 @@ router = APIRouter(
 )
 
 
-@router.get('/', response_model=list[FacilityModel])
+@router.get('/', response_model=ListResponse[FacilityModel])
 async def facility_list():
     facilities = await legacy.Facility.objects.filter(active=True).all()
     return [FacilityModel.from_legacy(
@@ -18,8 +19,8 @@ async def facility_list():
     ) for facility in facilities]
 
 
-@router.get('/{id}', response_model=FacilityModel)
-async def facility_info(id: str):
-    facility = await legacy.Facility.objects.get(id=id)
+@router.get('/{facility_id}', response_model=DataResponse[FacilityModel])
+async def facility_info(facility_id: str):
+    facility = await legacy.Facility.objects.get(id=facility_id)
     roles = await legacy.Role.objects.filter(facility=facility.id).all()
     return FacilityModel.from_legacy(facility, roles)
