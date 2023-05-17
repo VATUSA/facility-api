@@ -3,7 +3,9 @@ from app.helpers.moodle.MoodleHelper import MoodleHelper
 
 
 load_dotenv()
+categories = MoodleHelper.get_all_categories()
+courses = MoodleHelper.get_all_courses()
 
-data = MoodleHelper.get_all_courses()
-
-print()
+for course in courses:
+    quizzes = MoodleHelper.get_quizzes_by_courses(course.get('id'))
+    print()
