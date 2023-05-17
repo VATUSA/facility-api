@@ -8,5 +8,5 @@
 	branch = main
 [submodule "app/helpers/moodle"]
 	path = app/helpers/moodle
-	url = https://github.com/VATUSA/moodle-integration.git
+	url = https://github.com/VATUSA/moodle-integration
 	branch = main
